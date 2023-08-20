@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!--Style.css-->
+    <link rel="stylesheet" href="UserRegistration.css">
+    <!--Bootstrap icone-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Js-->
+    <script src="userRe.js"></script>
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                <h1> User Registration</h1>
+            </div>
+            <form action="https://script.google.com/macros/s/AKfycbyU9jTqkLlQ3CD5pS9AgKbxdwFrt_41SAc0mHokC744SB52b8HvBAxOBNAunsv68uxY/exec" method="post">
+              <div class="card-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" id="Username" name="Username" onchange="ValidateUsername()" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="alert alert-danger" style="display: none;"  id="didntp" >
+                    UserName Alredy Existing
+                  </div> 
+                  <div class="alert alert-warning" style="display: none;" id="wait_screen" >
+                    Please wait
+                  </div> 
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" name="Password" aria-label="Password" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
+                    <input type="password" class="form-control" placeholder="Conform Password" aria-label="Conform Password" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="Email" aria-describedby="basic-addon1">
+                  </div>
+                  <button class="btn btn-primary" onclick="Openlogin()" type="submit">Submit</button>
+              </div>
+            </form>
+        </div>
+    </div>
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
