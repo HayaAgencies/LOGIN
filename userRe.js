@@ -1,4 +1,4 @@
-var appsscriptlink = "https://script.google.com/macros/s/AKfycbx2ldMkQsKtuqaLCUz8ilyXjAwuvE-ohCDxrs55dRITCf1yiLx_Ciqi0PswnOvYRcbR"
+var appsscriptlink = "https://script.google.com/macros/s/AKfycbxXbU5_msSkooHVLJdZA3MohiK-CXLcwZ7GMISTZg0aXjO7bxwmdRg-k87EEViG8amX"
 let exist = false;
 let otp = "";
 const Generateotp = () =>{
@@ -15,7 +15,7 @@ function ValidateUsername(){
     $("#invu").hide()
     $("#wait_screen").show()
     var username = $("#Username").val()
-    $.getJSON(appsscriptlink+"/exec?&username="+username,
+    $.getJSON(appsscriptlink+"/exec?page=search&username="+username,
     function(data){
         if(data == "Not")
         {
@@ -30,5 +30,39 @@ function ValidateUsername(){
         }
     })
 }
+function send_otp()
+{
+    var emailid = $("#email").val()
+    $.getJSON(appsscriptlink+"/exec?page=SendOtp&EmailId="+emailid,
+    function(data){
+        
+        otp = data
+        console.log(otp)
+    })
+}
 
-console.log(Generateotp())
+function vaidateOTP()
+{
+    var uOTP = $("#OTP").val() 
+    if(uOTP == otp)
+    {   
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbyU9jTqkLlQ3CD5pS9AgKbxdwFrt_41SAc0mHokC744SB52b8HvBAxOBNAunsv68uxY/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+    }
+    else
+    {
+        alert("Your OTP is incorrect")
+    }
+}    

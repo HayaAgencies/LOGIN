@@ -1,4 +1,4 @@
-var appsscriptlink = "https://script.google.com/macros/s/AKfycbx2ldMkQsKtuqaLCUz8ilyXjAwuvE-ohCDxrs55dRITCf1yiLx_Ciqi0PswnOvYRcbR"
+var appsscriptlink = "https://script.google.com/macros/s/AKfycbxXbU5_msSkooHVLJdZA3MohiK-CXLcwZ7GMISTZg0aXjO7bxwmdRg-k87EEViG8amX"
 var appspassword = 0;
 let otp=""
 
@@ -7,7 +7,7 @@ function ValidateUsername(){
     $("#invu").hide()
     $("#wait_screen").show()
     var username = $("#Username").val()
-    $.getJSON(appsscriptlink+"/exec?&username="+username,
+    $.getJSON(appsscriptlink+"/exec?page=search&username="+username,
     function(data){
         if(data == "Not")
         {

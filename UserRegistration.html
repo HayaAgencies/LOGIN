@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!--Js-->
     <script src="userRe.js"></script>
+    <!--AJAX-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--JQUERY-->
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +23,7 @@
             <div class="card-header">
                 <h1> User Registration</h1>
             </div>
-            <form action="https://script.google.com/macros/s/AKfycbyU9jTqkLlQ3CD5pS9AgKbxdwFrt_41SAc0mHokC744SB52b8HvBAxOBNAunsv68uxY/exec" method="post">
+            <form action=""  id="submit-form">
               <div class="card-body">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
@@ -43,9 +45,13 @@
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" name="Email" aria-describedby="basic-addon1">
+                    <input type="email" id="email" class="form-control" placeholder="Email" aria-label="Email" name="Email" aria-describedby="basic-addon1" >
                   </div>
-                  <button class="btn btn-primary" onclick="Openlogin()" type="submit">Submit</button>
+                  <div class="input-group mb-3">
+                    <button class="btn btn-success" onclick="send_otp()" type="button">SEND OTP</button><span class="input-group-text" id="basic-addon1">Enter OTP</span>
+                    <input type="number" id="OTP" class="form-control" placeholder="Enter OTP" aria-label="OTP" name="OTP" aria-describedby="basic-addon1">
+                  </div>
+                  <button class="btn btn-primary" onclick="vaidateOTP()" type="button">Submit</button>
               </div>
             </form>
         </div>
