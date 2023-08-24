@@ -76,7 +76,7 @@ function vaidateOTP()
                 method:"post",
                 success:function (response){
                     alert("Form submitted successfully")
-                    window.location.replace("https://hayaagencies.github.io/LOGIN/")
+                    window.location.replace("index.html")
                         
                 },
                 error:function (err){
