@@ -7,3 +7,11 @@
     display: flex;
     
 }
+a{
+    margin: 37px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 24px;
+}
