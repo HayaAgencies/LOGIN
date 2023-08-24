@@ -55,3 +55,15 @@ function Clearalert()
     $("#Successlogin").hide()
     $("#failedlogin").hide()
 }
+function showpassword()
+{
+    let Password = document.getElementById("Password")
+    let icon = document.getElementById("Icon")
+    if(Password.type == "password")
+    {
+        Password.type= "Text"
+    }
+    else{
+        Password.type = "password"
+    }
+}
