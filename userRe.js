@@ -64,6 +64,8 @@ function vaidateOTP()
     var uOTP = $("#OTP").val() 
     if(uOTP == otp)
     {
+        ValidateUsername()
+        checkpassword()
         if(p)
         {
             if(x)
